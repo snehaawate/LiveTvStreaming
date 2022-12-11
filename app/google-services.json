@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "278562090540",
+    "firebase_url": "https://livetvstreming.firebaseio.com",
+    "project_id": "livetvstreming",
+    "storage_bucket": "livetvstreming.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:278562090540:android:591703cf4150340f",
+        "android_client_info": {
+          "package_name": "com.sneha.livestreaming"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "278562090540-jue7a8fc1tjdv92uli3mfng0tvlaomtg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSZyEEYUftD7fJI6f_Q6Sn7IVvfVK62Jg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

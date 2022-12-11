@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.sneha.livestreaming">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name=".utility.Global"
+
+        android:icon="@drawable/appicon"
+        android:label="@string/app_name"
+        android:usesCleartextTraffic="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:remove="android:appComponentFactory"
+        tools:replace="android:icon">
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+        <activity
+            android:name=".ui.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- FCM SERVICE -->
+        <service android:name=".utility.fcm.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".utility.fcm.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".ui.SelectedCategoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.LatestChannelDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.PlayFullScreenVideoActivity2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.MyFavoriteDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.SelectedChannelDetalActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.YouTubePlayerActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensor"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+
+        <meta-data
+            android:name="com.thefinestartist.ytpa.YouTubePlayerActivity.ApiKey"
+            android:value="AIzaSyDal-1erfbOPtX1p2ZwQ2yDbHIa00mapX4" />
+
+        <activity
+            android:name=".ui.VideoPlayerActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/PlayerTheme">
+            <intent-filter>
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:scheme="content" />
+                <data android:scheme="asset" />
+                <data android:scheme="file" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.NotificationDataActivity"
+            android:screenOrientation="portrait"/>
+
+        <meta-data
+        android:name="com.sneha.livestreaming.ui.YouTubePlayerActivity.ApiKey"
+        android:value="@string/youtube_api_key" />
+
+        <activity android:name="com.sneha.livestreaming.ui.PlayFullScreenVideoActivity" />
+        <activity android:name="com.sneha.livestreaming.ui.PlayFullScreenVideoActivity3" />
+
+    </application>
+
+</manifest>

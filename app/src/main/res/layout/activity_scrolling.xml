@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable name="category" type="com.sneha.livestreaming.ui.LatestChannelDetailActivity"/>
+    </data>
+   <RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/gray">
+
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/app_bar_height"
+            android:background="@color/white"
+            android:theme="@style/AppTheme">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_marginTop="@dimen/_50sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/main_imageview_placeholder"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_200sdp"
+                        android:tint="#11000000"
+                        app:layout_collapseMode="parallax"
+                        app:layout_collapseParallaxMultiplier="0.9"
+                        app:srcCompat="@mipmap/ic_launcher" />
+
+                    <RelativeLayout
+                        android:id="@+id/video_panel"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <com.google.android.youtube.player.YouTubeThumbnailView
+                            android:id="@+id/thumbnail"
+                            android:layout_width="@dimen/_5sdp"
+                            android:layout_height="@dimen/_5sdp"
+                            android:layout_centerInParent="true"
+                            android:visibility="visible"/>
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_gravity="center"
+                            app:cardCornerRadius="@dimen/_5sdp"
+                            app:cardElevation="@dimen/_5sdp"
+                            android:backgroundTint="@color/black_transparent_orderscreen"
+                            android:alpha="0.7"
+                            android:visibility="visible"
+                            android:layout_centerInParent="true">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/play_video"
+                                android:layout_width="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_height="@dimen/_50sdp"
+                                app:srcCompat="@drawable/playicon"
+
+                                android:adjustViewBounds="true"
+                                />
+                        </androidx.cardview.widget.CardView>
+                    </RelativeLayout>
+
+                   <!-- <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_gravity="center"
+                        app:cardCornerRadius="@dimen/_5sdp"
+                        app:cardElevation="@dimen/_5sdp"
+                        android:backgroundTint="@color/black_transparent_orderscreen"
+                        android:alpha="0.7"
+                        android:visibility="gone">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/play_video"
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_height="@dimen/_50sdp"
+                            app:srcCompat="@drawable/playicon"
+
+                            android:adjustViewBounds="true"
+                            />
+                    </androidx.cardview.widget.CardView>-->
+                </FrameLayout>
+
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <include layout="@layout/content_scrolling" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fab_margin"
+            app:layout_anchor="@id/app_bar"
+            app:layout_anchorGravity="bottom|end"
+            app:srcCompat="@drawable/ic_un_favorite" />
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <include layout="@layout/custom_toolbar" />
+</RelativeLayout>
+</layout>

@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">LiveTvStreming</string>
+    <string name="no_internet_title">No Internt Connection</string>
+    <string name="no_internet">Your mobile is not connected to the internet. Please connect to an active internet connection.</string>
+    <string name="retry">Retry</string>
+    <string name="search_hint">Search here...</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+    <string name="sample_string">Copyright 2018 Abhiandroid \nAll Right are reserved</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_scrolling">ScrollingActivity</string>
+    <string name="exo_controls_previous_description">Previous track</string>
+    <string name="exo_controls_next_description">Next track</string>
+    <string name="exo_controls_pause_description">Pause</string>
+    <string name="exo_controls_play_description">Play</string>
+    <string name="exo_controls_stop_description">Stop</string>
+    <string name="exo_controls_rewind_description">Rewind</string>
+    <string name="exo_controls_fastforward_description">Fast forward</string>
+    <string name="video">Video</string>
+    <string name="radio_player">Radio Player</string>
+    <string name="video_player">Video Player</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="banner_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="Interstitial_unit_id">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="addmob_app_id">ca-app-pub-3940256099942544~3347511713</string>
+  <!--  <string name="youtube_api_key">AIzaSyB86A2yiMsB3XGCoVpBvcWt1zI6ffcFV0k</string>-->
+   <!-- <string name="youtube_api_key">AIzaSyAR-KdRQAqoVqAgQUPBm3ZWjyafi_Ry4b4</string>-->
+    <string name="youtube_api_key">AIzaSyBxkhDIeKVAFKPwVRLjm4sFYyDA8zKhPDY</string>
+    <string name="video_error">Please wait while we are preparing to play video. \n Back button is disabled for a moment.</string>
+
+
+</resources>
